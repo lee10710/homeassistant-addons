@@ -1,3 +1,7 @@
+## 1.1.9
+
+- add parameter: exclude gas valve device from periodic query state
+
 ## 1.1.8
 
 - add parameter for debugging (log parsed rs-45 packet)

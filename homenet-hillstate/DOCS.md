@@ -149,10 +149,12 @@ periodic_query_state:
   enable: false
   period: 1000
   verbose: false
+  exclude_gas_valve: false
 ```
 - enable: 1일 경우 주기적으로 쿼리 패킷을 순차적으로 전송
 - period: 쿼리 주기 (단위: ms, 1000 = 1초)
 - verbose: 로그 기록 여부 (디버깅용)
+- exclude_gas_valve: 주기적 쿼리 시 가스 밸브가 닫히는 환경에서 true로 설정
 
 ### 기타 설정
 ```yaml

@@ -1,5 +1,5 @@
 name: HomeNetwork for Hillstate
-version: "1.1.8"
+version: "1.1.9"
 slug: yogyui_homenet_hillstate
 description: RS-485 based HomeNetwork for Hillstate (Hyundai HT)
 arch:
@@ -77,6 +77,7 @@ options:
     enable: false
     period: 1000
     verbose: false
+    exclude_gas_valve: false
   subphone:
     enable: false
     enable_video_streaming: false
@@ -169,6 +170,7 @@ schema:
     enable: bool
     period: int
     verbose: bool
+    exclude_gas_valve: bool
   subphone:
     enable: bool
     enable_video_streaming: bool
