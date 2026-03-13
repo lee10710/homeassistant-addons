@@ -60,6 +60,7 @@ options:
     activate: false
     prefix: homeassistant
     timeout: 60
+    version: 2025.10.1
   parser_mapping:
     light: 0
     outlet: 0
@@ -153,6 +154,7 @@ schema:
     activate: bool
     prefix: str
     timeout: int(1,)
+    version: str
   parser_mapping:
     light: int(0,)
     outlet: int(0,)

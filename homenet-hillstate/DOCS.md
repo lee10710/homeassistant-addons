@@ -105,10 +105,12 @@ discovery:
   activate: false
   prefix: homeassistant
   timeout: 60
+  version: 2025.10.1
 ```
 - activate: `true`일 경우 RS-485 패킷을 해석해 기기들을 자동으로 추가됨(**discovery 완료 후 자동으로 false로 전환됨**)
 - prefix: HA MQTT 애드온의 디바이스 디스커버리 접두어 (따로 설정하지 않았을 경우 `homeassistant`로 그대로 두면 됨)
 - timeout: 디바이스 자동 탐색 시간 (시간이 지난 후 앱이 자동으로 재시작되며, **자동으로 discovery 기능은 deactivate됨**)
+- version: HA Core 버전 명시 (2025.10.1 버전 이후 MQTT Discovery payload 키 변경: default_entity_id)
 
 ### 패킷 파서 인덱스 매핑
 ```yaml

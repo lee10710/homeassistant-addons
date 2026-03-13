@@ -1,3 +1,7 @@
+## 1.2.0
+
+- add parameter: Homeassistant core version
+
 ## 1.1.9
 
 - add parameter: exclude gas valve device from periodic query state
