@@ -1,5 +1,5 @@
 name: HomeNetwork for Hillstate
-version: "1.1.9"
+version: "1.2.0"
 slug: yogyui_homenet_hillstate
 description: RS-485 based HomeNetwork for Hillstate (Hyundai HT)
 arch:
