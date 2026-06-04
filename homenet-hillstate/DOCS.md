@@ -172,6 +172,8 @@ etc:
   elevator_verbose_packet: false
   dimminglight_max_brightness_level: 7
   dimminglight_convert_method: 0
+  outlet_handle_power_consumption: false
+  outlet_handle_standby_cutoff_mode: false
   clear_all_devices: false
   change_device_state_after_command: false
 ```
@@ -186,6 +188,8 @@ etc:
 - elevator_verbose_packet: 엘리베이터 관련 RS-485 패킷 로깅 여부
 - dimminglight_max_brightness_level: 디밍조명 최고 밝기 레벨 (`1` ~ `255` 사이 값)
 - dimminglight_convert_method: 디밍조명 밝기값 변환 방법 (`0`: 반올림, `1`: 내림, `2`: 올림)
+- outlet_handle_power_consumption: 전원콘센트 소비전력량 사용 여부 (sensor 추가)
+- outlet_handle_standby_cutoff_mode: 전원콘센트 대기전력 차단 모드 사용 여부 (switch 추가)
 - clear_all_devices: 추가된 모든 RS-485 디바이스를 어플리케이션에서 삭제 (어플리케이션 재시작 후 자동으로 false로 전환됨)<br>
   `Note`: HA의 entry를 삭제하지는 않음
 - change_device_state_after_command: 디바이스 상태 변경 명령 직후 해당 명령값으로 갱신할 지 여부
@@ -201,19 +205,21 @@ subphone:
   frame_rate: 30
   width: 640
   height: 480
+  rtmp_server: rtmp://0.0.0.0:1935/live
   enable_auto_open_front_door: false
   auto_open_front_door_interval: 3
   enable_auto_open_communal_door: false
   auto_open_communal_door_interval: 3
 ```
 - enable: 주방 비디오폰 연동 여부
-- enable_video_streaming: 주방 비디오폰의 영상 신호 연동 여부 (FFMpeg + FFServer)
-- conf_file_path: FFServer 설정 파일 경로
-- feed_path: FFServer 스트리밍 경로
+- enable_video_streaming: 주방 비디오폰의 영상 신호 연동 여부
+- conf_file_path: FFServer 설정 파일 경로 (deprecated)
+- feed_path: FFServer 스트리밍 경로 (deprecated)
 - input_device: 비디오 디바이스 경로
 - frame_rate: 스트리밍 프레임율(fps)
 - width: 스트리밍 영상의 폭
 - height: 스트리밍 영상의 높이
+- rtmp_server: RTMP 서버 경로 (nginx 설정 필요)
 - enable_auto_open_front_door: 세대현관문 초인종 울림 후 자동 열림 기능 활성화 여부 (지정하지 않을 시 default값은 false)
 - auto_open_front_door_interval: 세대현관문 초인종 울림 후 자동으로 열리기까지의 시간 (단위: 초, 지정하지 않을 시 default값은 3.0)
 - enable_auto_open_communal_door: 공동현관문 초인종 울림 후 자동 열림 기능 활성화 여부 (지정하지 않을 시 default값은 false)

@@ -1,3 +1,8 @@
+## 1.3.0
+
+- add parameter: outlet options (power consumption sensor, standby cut-off mode switch)
+- add parameter: RTMP server setting for kitchen subphone video streaming
+
 ## 1.2.0
 
 - add parameter: Homeassistant core version
