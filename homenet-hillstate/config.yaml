@@ -21,7 +21,7 @@ uart: true
 usb: true
 gpio: true
 panel_icon: mdi:home-automation
-panel_title: YOGYUI-HILLSTATE
+panel_title: LG-MODBUS
 panel_admin: false
 map:
   - addon_config:rw
@@ -35,8 +35,8 @@ options:
     port: 1883
     username: username
     password: password
-    client_id: yogyui_hyundai_ht
-    topic_prefix: home
+    client_id: yogyui_lg_modbus
+    topic_prefix: home/lg_modbus
     tls_enable: false
     tls_ca_certs: /config/ssl/cacert.pem
     tls_certfile: /config/ssl/fullchain.pem
@@ -97,7 +97,7 @@ options:
     thermostat_range_min: 18
     thermostat_range_max: 35
     airconditioner_range_min: 18
-    airconditioner_range_max: 35
+    airconditioner_range_max: 30
     elevator_packet_call_type: 0
     elevator_check_command_method: 0
     elevator_packet_command_call_down_value: 6
@@ -171,10 +171,10 @@ schema:
     emotionlight: int(0,)
     dimminglight: int(0,)
   periodic_query_state:
-    enable: bool
-    period: int
-    verbose: bool
-    exclude_gas_valve: bool
+    enable: false
+    period: 1000
+    verbose: false
+    exclude_gas_valve: false
   subphone:
     enable: bool
     enable_video_streaming: bool
