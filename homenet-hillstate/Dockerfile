@@ -11,7 +11,7 @@ RUN apk add --update --no-cache \
 
 # clone repository from GitHub
 RUN mkdir -p /repos/yogyui
-RUN git clone https://github.com/YOGYUI/HomeNetwork.git /repos/yogyui/HomeNetwork
+RUN git clone https://github.com/lee10710/HomeNetwork.git /repos/yogyui/HomeNetwork
 WORKDIR /repos/yogyui/HomeNetwork/Hillstate-Gwanggyosan
 RUN git config pull.rebase true
 
