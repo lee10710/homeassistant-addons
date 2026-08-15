@@ -42,19 +42,21 @@ options:
     tls_certfile: /config/ssl/fullchain.pem
     tls_keyfile: /config/ssl/privkey.pem
   rs485:
-    - name: port1
+    - name: lg_aircon
       index: 0
       enable: true
-      hwtype: 0
-      packettype: 0
+      hwtype: 1
+      packettype: 2
       serial: /dev/ttyUSB0
       baudrate: 9600
       databit: 8
       parity: N
       stopbits: 1
-      socketaddr: 127.0.0.1
+      socketaddr: 192.168.0.35
       socketport: 8899
       check_connection: true
+      cmd_interval_ms: 300
+      cmd_retry_count: 25
   discovery:
     activate: false
     prefix: homeassistant
