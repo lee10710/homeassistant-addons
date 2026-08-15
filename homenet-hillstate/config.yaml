@@ -173,10 +173,10 @@ schema:
     emotionlight: int(0,)
     dimminglight: int(0,)
   periodic_query_state:
-    enable: false
-    period: 1000
-    verbose: false
-    exclude_gas_valve: false
+    enable: bool
+    period: int
+    verbose: bool
+    exclude_gas_valve: bool
   subphone:
     enable: bool
     enable_video_streaming: bool
