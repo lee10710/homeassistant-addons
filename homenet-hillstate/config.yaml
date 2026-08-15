@@ -1,5 +1,5 @@
 name: HomeNetwork for Hillstate LG Modbus
-version: "1.3.0-lg2"
+version: "1.3.0-lg3"
 slug: yogyui_homenet_hillstate_lg_modbus
 description: RS-485 based HomeNetwork for Hillstate (Hyundai HT)
 arch:
@@ -10,7 +10,7 @@ arch:
   - i386
 init: false
 startup: application
-url: https://github.com/YOGYUI/homeassistant-addons/tree/main/homenet-hillstate
+url: https://github.com/lee10710/homeassistant-addons/tree/main/homenet-hillstate
 ingress: true
 ingress_port: 7929
 ingress_entry: /
@@ -98,7 +98,7 @@ options:
     thermo_len_per_dev: 3
     thermostat_range_min: 18
     thermostat_range_max: 35
-    airconditioner_range_min: 18
+    airconditioner_range_min: 16
     airconditioner_range_max: 30
     elevator_packet_call_type: 0
     elevator_check_command_method: 0
