@@ -1,5 +1,5 @@
 name: HomeNetwork for Hillstate LG Modbus
-version: "1.3.0-lg3"
+version: "1.3.0-lg4"
 slug: yogyui_homenet_hillstate_lg_modbus
 description: RS-485 based HomeNetwork for Hillstate (Hyundai HT)
 arch:
